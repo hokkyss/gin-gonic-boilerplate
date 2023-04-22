@@ -56,6 +56,6 @@ func main() {
 	ginApp.Run(":8000")
 }
 
-func ServerlessHandler(w http.ResponseWriter, r *http.Request) {
+func Handler(w http.ResponseWriter, r *http.Request) {
 	ginApp.ServeHTTP(w, r)
 }
