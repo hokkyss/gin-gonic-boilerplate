@@ -8,6 +8,7 @@ import (
 	"github.com/hokkyss/gin-gonic-boilerplate/configs"
 	"github.com/hokkyss/gin-gonic-boilerplate/controllers"
 	"github.com/hokkyss/gin-gonic-boilerplate/models"
+	"github.com/hokkyss/gin-gonic-boilerplate/types"
 	"github.com/joho/godotenv"
 )
 
@@ -45,6 +46,10 @@ func Init() {
 
 	GinApp = gin.New()
 	v1Api := GinApp.Group("/api/v1")
+
+	GinApp.Use(func(ctx *gin.Context) {
+		ctx.JSON(http.StatusNotFound, types.MessageResponse{Detail: "Not Found!"})
+	})
 
 	err = controllers.InitControllers(v1Api)
 	if err != nil {
