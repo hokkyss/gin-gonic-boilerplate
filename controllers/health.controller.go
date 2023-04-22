@@ -10,6 +10,5 @@ func healthCheckRoutes(router *gin.RouterGroup)  {
 }
 
 func handlePing(c *gin.Context) {
-	c.Status(200)
 	c.JSON(200, types.PingResponse{Pong: "Pong"})
 }
