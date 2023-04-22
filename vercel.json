@@ -5,7 +5,7 @@
   "trailingSlash": false,
   "functions": {
     "api/**/*": {
-      "runtime": "@vercel/go"
+      "runtime": "@vercel/go@latest"
     }
   },
   "rewrites": [
