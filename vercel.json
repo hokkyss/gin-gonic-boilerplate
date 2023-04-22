@@ -3,11 +3,6 @@
   "cleanUrls": true,
   "public": false,
   "trailingSlash": false,
-  "functions": {
-    "api/**/*": {
-      "runtime": "@vercel/go@latest"
-    }
-  },
   "rewrites": [
     {
       "source": "/api(.*)",
