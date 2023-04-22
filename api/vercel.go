@@ -18,7 +18,7 @@ var (
 func Init() {
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatalln(err)
+		log.Println(err)
 	}
 
 	err = configs.InitEnvConfig()
